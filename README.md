@@ -119,5 +119,5 @@ Flags: `--hop-ms`, `--speed`, `--resolve-timeout` (default 30 s), `--headless`, 
 
 Motor-imagery decoding is **not symmetric** in practice. **Event-related desynchronization (ERD)** in sensorimotor rhythms often **ramps up over ~1–2 s after the cue**, so probabilities can be **more stable late in the 4 s window**—what you see in the LSL client is normal. **Right-hand imagery** is also often **noisier or less lateralized** than left in some subjects and montages (C3/C4 SNR, volume conduction, dominance). None of that implies a bug in the labels.
 
-**Training:** `train_eegnet.py` now uses a **stratified** train/val split by default and prints **`val_acc_left` / `val_acc_right`** each epoch so you can see class-specific behavior. Try **`--balanced-loss`** if the model systematically favors one class. For serious evaluation, use **k-fold CV** and more runs/subjects.
+**Training:** `train_eegnet.py` uses a **stratified** train/val split by default and prints **`val_acc_left` / `val_acc_right`** each epoch so you can see class-specific behavior. Try **`--balanced-loss`** if the model systematically favors one class. For serious evaluation, use **k-fold CV** and more runs/subjects.
 
